@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary: #844dd1;
+  --backup: #e96900;
+  --dark: #131a26;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 18px 34px rgba(177, 175, 175, 0.733);
+
+}
+
+.display {
+  padding: 25px;
+  text-align: right;
+  background-color: var(--dark);
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+
+
+}
+
+.boxx {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+
+.operators2 {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.operators1 {
+  display: flex;
+}
+
+.operators1 button {
+  flex: 1 1 0%;
+  background-color: var(--primary);
+  font-weight: 600;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33%;
+  background-color: var(--dark);
+}
+
+.symbols {
+  width: 33%;
+}
+
+.operators2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.operators2 button {
+  background-color: var(--primary);
+  font-weight: 600;
 }
